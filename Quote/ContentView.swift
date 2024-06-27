@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 HStack {
                     VStack(alignment: .leading) {
                         Text(Date.monthDayDateChinaStyle(date: today))
@@ -56,6 +56,9 @@ struct ContentView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             self.today = Date()
+            Task {
+                await self.quoteLoader.fetchTodayQuote()
+            }
         }
     }
 }

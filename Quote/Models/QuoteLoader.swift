@@ -60,7 +60,9 @@ final class QuoteLoader: ObservableObject, Decodable {
     }
     
     func fetchTodayQuote() async {
+        print("fetching Today Quote....")
         await self._fetchRemoteTodayQuote(from: DatabaseLink.todayQuoteURLFromGitee)
+        print("Done: fetching Today Quote....")
     }
     
     // MARK: - 获取历史Quotes用
@@ -92,7 +94,9 @@ final class QuoteLoader: ObservableObject, Decodable {
     }
     
     func fetchQuotes() async {
+        print("fetching All Quotes....")
         await self._fetchRemoteHistoryQuotes(from: DatabaseLink.historyQuotesURLFromGitee)
+        print("Done: fetching All Quotes....")
     }
 }
 
