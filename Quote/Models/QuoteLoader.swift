@@ -8,8 +8,12 @@
 import Foundation
 
 enum DatabaseLink {
+    // MARK: - Github平台
     static let todayQuoteURL: String = "https://github.com/HuangRunHua/Quote/raw/main/today.json"
     static let historyQuotesURL: String = "https://github.com/HuangRunHua/Quote/raw/main/history.json"
+    // MARK: - Gitee平台
+    static let todayQuoteURLFromGitee: String = "https://gitee.com/huangrunhua/Quote/raw/main/today.json"
+    static let historyQuotesURLFromGitee: String = "https://gitee.com/huangrunhua/Quote/raw/main/history.json"
 }
 
 final class QuoteLoader: ObservableObject, Decodable {
@@ -56,7 +60,7 @@ final class QuoteLoader: ObservableObject, Decodable {
     }
     
     func fetchTodayQuote() async {
-        await self._fetchRemoteTodayQuote(from: DatabaseLink.todayQuoteURL)
+        await self._fetchRemoteTodayQuote(from: DatabaseLink.todayQuoteURLFromGitee)
     }
     
     // MARK: - 获取历史Quotes用
@@ -88,7 +92,7 @@ final class QuoteLoader: ObservableObject, Decodable {
     }
     
     func fetchQuotes() async {
-        await self._fetchRemoteHistoryQuotes(from: DatabaseLink.historyQuotesURL)
+        await self._fetchRemoteHistoryQuotes(from: DatabaseLink.historyQuotesURLFromGitee)
     }
 }
 
