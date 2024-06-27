@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct QuoteApp: App {
-    
+    @StateObject private var quoteLoader = QuoteLoader()
     var body: some Scene {
         WindowGroup {
-            ContentView(quote: Quote.preview[0])
+            ContentView()
+                .environmentObject(quoteLoader)
         }
     }
 }

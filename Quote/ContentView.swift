@@ -10,8 +10,10 @@ import NukeUI
 
 @MainActor
 struct ContentView: View {
+    @EnvironmentObject var quoteLoader: QuoteLoader
     private let cornerRadius: CGFloat = 10
-    var quote: Quote
+    @State private var quotes: [Quote] = []
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -19,28 +21,37 @@ struct ContentView: View {
             }
             .navigationTitle(Text("June 27"))
         }
+        .task {
+            await self.quoteLoader.fetchTodayQuote()
+        }
     }
 }
 
 #Preview {
-    ContentView(quote: Quote.preview[1])
+    ContentView()
+        .environmentObject(QuoteLoader())
 }
 
 
 extension ContentView {
     @ViewBuilder
     private var cardView: some View {
-        switch quote.cardStyle {
-        case .zstack:
-            zstackCardView
-        case .vertical:
-            verticalCardView
+        if let todayQuote = quoteLoader.todayQuote {
+            switch todayQuote.style {
+            case .zstack:
+                zstackCardView(quote: todayQuote)
+            case .vertical:
+                verticalCardView(quote: todayQuote)
+            }
+        } else {
+            ProgressView()
+                .progressViewStyle(.circular)
         }
     }
     
     
     @ViewBuilder
-    private var backgroundImage: some View {
+    private func backgroundImage(quote: Quote) -> some View {
         VStack {
             if let imageURL = quote.imageURL {
                 LazyImage(url: imageURL, content: { phase in
@@ -63,14 +74,16 @@ extension ContentView {
         }
     }
     
-    private var zstackCardView: some View {
-        backgroundImage
+    @ViewBuilder
+    private func zstackCardView(quote: Quote) ->  some View {
+        backgroundImage(quote: quote)
             .overlay(alignment: .bottomLeading) {
                 HStack {
                     VStack(alignment: .leading, spacing: 10) {
                         Text(quote.tag)
                         Text(quote.title)
                             .font(.system(size: 25))
+                            .textSelection(.enabled)
                         if let source = quote.source {
                             HStack {
                                 Spacer()
@@ -92,16 +105,17 @@ extension ContentView {
             .shadow(radius: 20)
     }
     
-    
-    private var verticalCardView: some View {
+    @ViewBuilder
+    private func verticalCardView(quote: Quote) -> some View {
         VStack(alignment: .leading) {
-            backgroundImage
+            backgroundImage(quote: quote)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(quote.tag)
                     .foregroundColor(Color.descriptionFontColor)
                 Text(quote.title)
                     .font(.system(size: 20))
+                    .textSelection(.enabled)
                 if let source = quote.source {
                     HStack {
                         Spacer()
