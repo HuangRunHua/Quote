@@ -20,6 +20,10 @@
 		BD93CD132C2D1BFB0023675C /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = BD93CD122C2D1BFB0023675C /* NukeVideo */; };
 		BD93CD162C2D23480023675C /* demo.json in Resources */ = {isa = PBXBuildFile; fileRef = BD93CD152C2D23480023675C /* demo.json */; };
 		BD93CD182C2D23C40023675C /* QuoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD172C2D23C40023675C /* QuoteLoader.swift */; };
+		BD93CD1A2C2D3DBA0023675C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD192C2D3DBA0023675C /* DateExtension.swift */; };
+		BD93CD1C2C2D40140023675C /* demoArray.json in Resources */ = {isa = PBXBuildFile; fileRef = BD93CD1B2C2D40140023675C /* demoArray.json */; };
+		BD93CD1F2C2D40E80023675C /* QuotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD1E2C2D40E80023675C /* QuotesList.swift */; };
+		BD93CD212C2D41420023675C /* QuoteCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD202C2D41420023675C /* QuoteCardRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		BD93CD092C2D143D0023675C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		BD93CD152C2D23480023675C /* demo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demo.json; sourceTree = "<group>"; };
 		BD93CD172C2D23C40023675C /* QuoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteLoader.swift; sourceTree = "<group>"; };
+		BD93CD192C2D3DBA0023675C /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BD93CD1B2C2D40140023675C /* demoArray.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = demoArray.json; sourceTree = "<group>"; };
+		BD93CD1E2C2D40E80023675C /* QuotesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesList.swift; sourceTree = "<group>"; };
+		BD93CD202C2D41420023675C /* QuoteCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				BD93CCF52C2D06380023675C /* QuoteApp.swift */,
 				BD93CCF72C2D06380023675C /* ContentView.swift */,
 				BD93CD062C2D13C70023675C /* Models */,
+				BD93CD1D2C2D40C40023675C /* Views */,
 				BD93CD032C2D0F350023675C /* Extensions */,
 				BD93CCF92C2D06390023675C /* Assets.xcassets */,
 				BD93CD142C2D23270023675C /* Resources */,
@@ -92,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BD93CD042C2D0F440023675C /* ColorExtension.swift */,
+				BD93CD192C2D3DBA0023675C /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -110,8 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				BD93CD152C2D23480023675C /* demo.json */,
+				BD93CD1B2C2D40140023675C /* demoArray.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD93CD1D2C2D40C40023675C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD93CD1E2C2D40E80023675C /* QuotesList.swift */,
+				BD93CD202C2D41420023675C /* QuoteCardRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +203,7 @@
 			files = (
 				BD93CCFD2C2D06390023675C /* Preview Assets.xcassets in Resources */,
 				BD93CD162C2D23480023675C /* demo.json in Resources */,
+				BD93CD1C2C2D40140023675C /* demoArray.json in Resources */,
 				BD93CCFA2C2D06390023675C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,7 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD93CD1F2C2D40E80023675C /* QuotesList.swift in Sources */,
+				BD93CD212C2D41420023675C /* QuoteCardRow.swift in Sources */,
 				BD93CD052C2D0F440023675C /* ColorExtension.swift in Sources */,
+				BD93CD1A2C2D3DBA0023675C /* DateExtension.swift in Sources */,
 				BD93CD082C2D13D30023675C /* CardStyle.swift in Sources */,
 				BD93CCF82C2D06380023675C /* ContentView.swift in Sources */,
 				BD93CD0A2C2D143D0023675C /* Quote.swift in Sources */,

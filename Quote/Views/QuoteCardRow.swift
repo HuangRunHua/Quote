@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  QuoteCardRow.swift
 //  Quote
 //
 //  Created by Runhua Huang on 2024/6/27.
@@ -9,64 +9,27 @@ import SwiftUI
 import NukeUI
 
 @MainActor
-struct ContentView: View {
-    @EnvironmentObject var quoteLoader: QuoteLoader
+struct QuoteCardRow: View {
     private let cornerRadius: CGFloat = 10
-    @State private var quotes: [Quote] = []
-    
+    var quote: Quote?
     var body: some View {
-        NavigationView {
-            ScrollView {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(Date.currentDate)
-                            .font(.system(size: 40, weight: .heavy))
-                        Text(Date.currentWeekday)
-                            .font(.system(size: 30, weight: .heavy))
-                            .foregroundColor(Color.descriptionFontColor)
-                    }
-                    Spacer()
-                }
-                .padding([.top, .leading, .trailing])
-                Divider()
-                    .padding([.leading, .trailing])
-                QuoteCardRow(quote: quoteLoader.todayQuote)
-                    .padding()
-            }
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink {
-                        QuotesList()
-                            .environmentObject(quoteLoader)
-                    } label: {
-                        Image(systemName: "calendar")
-                    }
-
-                }
-            })
-        }
-        .task {
-            await self.quoteLoader.fetchTodayQuote()
-        }
+        cardView
     }
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(QuoteLoader())
-        .environment(\.locale, .init(identifier: "zh"))
+    QuoteCardRow(quote: Quote.preview[0])
 }
 
-
-extension ContentView {
+extension QuoteCardRow {
     @ViewBuilder
     private var cardView: some View {
-        if let todayQuote = quoteLoader.todayQuote {
-            switch todayQuote.style {
+        if let quote = quote {
+            switch quote.style {
             case .zstack:
-                zstackCardView(quote: todayQuote)
+                zstackCardView(quote: quote)
             case .vertical:
-                verticalCardView(quote: todayQuote)
+                verticalCardView(quote: quote)
             }
         } else {
             ProgressView()
@@ -126,7 +89,7 @@ extension ContentView {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(Color.boundColor, lineWidth: 2)
             )
-            .padding()
+//            .padding()
             .shadow(radius: 20)
     }
     
@@ -155,7 +118,5 @@ extension ContentView {
             RoundedRectangle(cornerRadius: cornerRadius)
                 .stroke(Color.boundColor, lineWidth: 2)
         )
-        .padding()
     }
 }
-

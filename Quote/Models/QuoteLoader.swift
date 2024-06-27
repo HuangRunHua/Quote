@@ -25,6 +25,10 @@ final class QuoteLoader: ObservableObject, Decodable {
     func fetchTodayQuote() async {
         self.todayQuote = load("demo.json")
     }
+    
+    func fetchQuotes() async {
+        self.quotes = load("demoArray.json")
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
