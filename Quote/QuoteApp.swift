@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct QuoteApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(quote: Quote.preview[0])
         }
     }
 }

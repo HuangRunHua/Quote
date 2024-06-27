@@ -11,6 +11,13 @@
 		BD93CCF82C2D06380023675C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CCF72C2D06380023675C /* ContentView.swift */; };
 		BD93CCFA2C2D06390023675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD93CCF92C2D06390023675C /* Assets.xcassets */; };
 		BD93CCFD2C2D06390023675C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD93CCFC2C2D06390023675C /* Preview Assets.xcassets */; };
+		BD93CD052C2D0F440023675C /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD042C2D0F440023675C /* ColorExtension.swift */; };
+		BD93CD082C2D13D30023675C /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD072C2D13D30023675C /* CardStyle.swift */; };
+		BD93CD0A2C2D143D0023675C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93CD092C2D143D0023675C /* Quote.swift */; };
+		BD93CD0D2C2D1BFB0023675C /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = BD93CD0C2C2D1BFB0023675C /* Nuke */; };
+		BD93CD0F2C2D1BFB0023675C /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = BD93CD0E2C2D1BFB0023675C /* NukeExtensions */; };
+		BD93CD112C2D1BFB0023675C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = BD93CD102C2D1BFB0023675C /* NukeUI */; };
+		BD93CD132C2D1BFB0023675C /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = BD93CD122C2D1BFB0023675C /* NukeVideo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,9 @@
 		BD93CCF72C2D06380023675C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD93CCF92C2D06390023675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD93CCFC2C2D06390023675C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD93CD042C2D0F440023675C /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BD93CD072C2D13D30023675C /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
+		BD93CD092C2D143D0023675C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD93CD112C2D1BFB0023675C /* NukeUI in Frameworks */,
+				BD93CD0D2C2D1BFB0023675C /* Nuke in Frameworks */,
+				BD93CD0F2C2D1BFB0023675C /* NukeExtensions in Frameworks */,
+				BD93CD132C2D1BFB0023675C /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +67,8 @@
 			children = (
 				BD93CCF52C2D06380023675C /* QuoteApp.swift */,
 				BD93CCF72C2D06380023675C /* ContentView.swift */,
+				BD93CD062C2D13C70023675C /* Models */,
+				BD93CD032C2D0F350023675C /* Extensions */,
 				BD93CCF92C2D06390023675C /* Assets.xcassets */,
 				BD93CCFB2C2D06390023675C /* Preview Content */,
 			);
@@ -65,6 +81,23 @@
 				BD93CCFC2C2D06390023675C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD93CD032C2D0F350023675C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD93CD042C2D0F440023675C /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD93CD062C2D13C70023675C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD93CD072C2D13D30023675C /* CardStyle.swift */,
+				BD93CD092C2D143D0023675C /* Quote.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,12 @@
 			dependencies = (
 			);
 			name = Quote;
+			packageProductDependencies = (
+				BD93CD0C2C2D1BFB0023675C /* Nuke */,
+				BD93CD0E2C2D1BFB0023675C /* NukeExtensions */,
+				BD93CD102C2D1BFB0023675C /* NukeUI */,
+				BD93CD122C2D1BFB0023675C /* NukeVideo */,
+			);
 			productName = Quote;
 			productReference = BD93CCF22C2D06380023675C /* Quote.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,9 @@
 				Base,
 			);
 			mainGroup = BD93CCE92C2D06380023675C;
+			packageReferences = (
+				BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = BD93CCF32C2D06380023675C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD93CD052C2D0F440023675C /* ColorExtension.swift in Sources */,
+				BD93CD082C2D13D30023675C /* CardStyle.swift in Sources */,
 				BD93CCF82C2D06380023675C /* ContentView.swift in Sources */,
+				BD93CD0A2C2D143D0023675C /* Quote.swift in Sources */,
 				BD93CCF62C2D06380023675C /* QuoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -280,6 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +391,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD93CD0C2C2D1BFB0023675C /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		BD93CD0E2C2D1BFB0023675C /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		BD93CD102C2D1BFB0023675C /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		BD93CD122C2D1BFB0023675C /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD93CD0B2C2D1BFB0023675C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD93CCEA2C2D06380023675C /* Project object */;
 }
