@@ -14,9 +14,9 @@ def parase_image_width_and_height(filename: str) -> tuple[int, int]:
 if __name__ == "__main__":
     id = 0
     tag = "信鸽辉光"
-    title = "因为从心底害怕自己不值得被爱，我们孑然一身，”那一段是这样的，“然而就是因为孑然一身，才让我们认为自己不值得被爱。有一天，你不知道是什么时候，你会驱车上路。有一天，你不知道是什么时候，他或是她会蓦然出现。你会被爱，因为你今生第一次真正不再孤独。你会选择不再孤独下去。"
+    title = "因为从心底害怕自己不值得被爱，我们孑然一身"
     cardStyle = "vertical" #vertical, zstack
-    date = "2024年6月27日"
+    date = "2024年6月23日"
     today_image_name = "0.jpg"
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
     source: str = "《岛上书店》"
@@ -39,12 +39,12 @@ if __name__ == "__main__":
     }
     
     # 写入today.json文件
-    today_json_file = 'today.json'
+    # today_json_file = 'today.json'
 
-    with open(today_json_file, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+    # with open(today_json_file, 'w', encoding='utf-8') as f:
+    #     json.dump(data, f, ensure_ascii=False, indent=4)
 
-    print(f"JSON 数据已写入文件: {today_json_file}")
+    # print(f"JSON 数据已写入文件: {today_json_file}")
     
     # 写入history.json文件
     history_json_file = 'history.json'

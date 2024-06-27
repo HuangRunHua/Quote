@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuotesList: View {
     @EnvironmentObject var quoteLoader: QuoteLoader
+    @Environment(\.openURL) private var openURL
     var body: some View {
         VStack {
             if quoteLoader.quotes.isEmpty {
@@ -19,6 +20,11 @@ struct QuotesList: View {
                     ForEach(quoteLoader.quotes) { quote in
                         QuoteCardRow(quote: quote, showDate: true)
                             .padding()
+                            .onTapGesture {
+                                if let jumpScheme = quoteLoader.todayQuote?.jumpScheme, let url = URL(string: jumpScheme) {
+                                    openURL(url)
+                                }
+                            }
                     }
                 }
             }

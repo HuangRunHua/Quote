@@ -35,7 +35,7 @@ struct ContentView: View {
                 QuoteCardRow(quote: quoteLoader.todayQuote)
                     .padding()
                     .onTapGesture {
-                        if let jumpScheme = quoteLoader.todayQuote?.jumpScheme, let url = URL(string: "jumpScheme") {
+                        if let jumpScheme = quoteLoader.todayQuote?.jumpScheme, let url = URL(string: jumpScheme) {
                             openURL(url)
                         }
                     }
