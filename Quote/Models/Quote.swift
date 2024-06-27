@@ -17,6 +17,7 @@ struct Quote: Identifiable, Codable {
     var source: String?
     var coverImageWidth: CGFloat
     var coverImageHeight: CGFloat
+    var jumpScheme: String?
     
     
     var imageURL: URL? {

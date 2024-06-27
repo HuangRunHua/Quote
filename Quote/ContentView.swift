@@ -11,6 +11,7 @@ import NukeUI
 @MainActor
 struct ContentView: View {
     @EnvironmentObject var quoteLoader: QuoteLoader
+    @Environment(\.openURL) private var openURL
     private let cornerRadius: CGFloat = 10
     @State private var quotes: [Quote] = []
     @State private var today = Date()
@@ -33,6 +34,11 @@ struct ContentView: View {
                     .padding([.leading, .trailing])
                 QuoteCardRow(quote: quoteLoader.todayQuote)
                     .padding()
+                    .onTapGesture {
+                        if let jumpScheme = quoteLoader.todayQuote?.jumpScheme, let url = URL(string: "jumpScheme") {
+                            openURL(url)
+                        }
+                    }
             }
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {

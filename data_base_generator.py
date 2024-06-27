@@ -14,12 +14,13 @@ def parase_image_width_and_height(filename: str) -> tuple[int, int]:
 if __name__ == "__main__":
     id = 0
     tag = "信鸽辉光"
-    title = "跨过星河迈过月亮去迎接更好的自己。"
-    cardStyle = "zstack" #vertical
+    title = "因为从心底害怕自己不值得被爱，我们孑然一身，”那一段是这样的，“然而就是因为孑然一身，才让我们认为自己不值得被爱。有一天，你不知道是什么时候，你会驱车上路。有一天，你不知道是什么时候，他或是她会蓦然出现。你会被爱，因为你今生第一次真正不再孤独。你会选择不再孤独下去。"
+    cardStyle = "vertical" #vertical, zstack
     date = "2024年6月27日"
     today_image_name = "0.jpg"
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
-    source: str = "《小小巴黎书店》"
+    source: str = "《岛上书店》"
+    jumpScheme: str = "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45"
     
     local_image_name = "images/" + today_image_name
     (coverImageWidth, coverImageHeight) = parase_image_width_and_height(local_image_name)
@@ -31,9 +32,10 @@ if __name__ == "__main__":
         "cardStyle": cardStyle,
         "date": date,
         "image": image,
-        "source": source,
+        "source": source, # 可能不存在
         "coverImageWidth": coverImageWidth,
-        "coverImageHeight": coverImageHeight
+        "coverImageHeight": coverImageHeight,
+        "jumpScheme": jumpScheme # 可能不存在
     }
     
     # 写入today.json文件
