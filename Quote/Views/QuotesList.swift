@@ -17,7 +17,7 @@ struct QuotesList: View {
             } else {
                 ScrollView {
                     ForEach(quoteLoader.quotes) { quote in
-                        QuoteCardRow(quote: quote)
+                        QuoteCardRow(quote: quote, showDate: true)
                             .padding()
                     }
                 }

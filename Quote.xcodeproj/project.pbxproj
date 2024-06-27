@@ -128,8 +128,8 @@
 		BD93CD1D2C2D40C40023675C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD93CD1E2C2D40E80023675C /* QuotesList.swift */,
 				BD93CD202C2D41420023675C /* QuoteCardRow.swift */,
+				BD93CD1E2C2D40E80023675C /* QuotesList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

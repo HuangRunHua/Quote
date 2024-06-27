@@ -12,13 +12,14 @@ import NukeUI
 struct QuoteCardRow: View {
     private let cornerRadius: CGFloat = 10
     var quote: Quote?
+    var showDate: Bool = false
     var body: some View {
         cardView
     }
 }
 
 #Preview {
-    QuoteCardRow(quote: Quote.preview[0])
+    QuoteCardRow(quote: Quote.preview[0], showDate: true)
 }
 
 extension QuoteCardRow {
@@ -78,6 +79,12 @@ extension QuoteCardRow {
                                 Text(source)
                             }
                         }
+                        if showDate {
+                            HStack {
+                                Spacer()
+                                Text(quote.date)
+                            }
+                        }
                     }
                     .foregroundColor(Color.white)
                     Spacer()
@@ -89,7 +96,6 @@ extension QuoteCardRow {
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(Color.boundColor, lineWidth: 2)
             )
-//            .padding()
             .shadow(radius: 20)
     }
     
@@ -108,6 +114,13 @@ extension QuoteCardRow {
                     HStack {
                         Spacer()
                         Text(source)
+                    }
+                }
+                if showDate {
+                    HStack {
+                        Spacer()
+                        Text(quote.date)
+                            .foregroundColor(Color.descriptionFontColor)
                     }
                 }
             }

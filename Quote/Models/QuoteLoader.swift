@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum DatabaseLink {
+    static let todayQuoteURL: String = "https://github.com/HuangRunHua/Quote/raw/main/today.json"
+    static let historyQuotesURL: String = "https://github.com/HuangRunHua/Quote/raw/main/history.json"
+}
+
 final class QuoteLoader: ObservableObject, Decodable {
     @Published var todayQuote: Quote?
     @Published var quotes: [Quote] = []
@@ -22,12 +27,68 @@ final class QuoteLoader: ObservableObject, Decodable {
     
     init() {}
     
+    // MARK: - 获取今日Quote用
+    private func _fetchRemoteTodayQuote(from urlString: String) async {
+        guard let databaseURL = URL(string: urlString) else {
+            return
+        }
+        do {
+            let (data, response) = try await URLSession.shared.data(from: databaseURL)
+            
+            if let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 {
+                DispatchQueue.main.async {
+                    self._parseSingleQuoteJsonData(data: data)
+                }
+            }
+        } catch {
+            print("Error in _fetchRemoteTodayQuote: \(error.localizedDescription)")
+        }
+    }
+    
+    private func _parseSingleQuoteJsonData(data: Data) {
+        let decoder = JSONDecoder()
+        do {
+            self.todayQuote = try decoder.decode(Quote.self, from: data)
+        } catch {
+            print("Error in _parseSingleQuoteJsonData: \(error)")
+        }
+    }
+    
     func fetchTodayQuote() async {
-        self.todayQuote = load("demo.json")
+        await self._fetchRemoteTodayQuote(from: DatabaseLink.todayQuoteURL)
+    }
+    
+    // MARK: - 获取历史Quotes用
+    private func _fetchRemoteHistoryQuotes(from urlString: String) async {
+        guard let databaseURL = URL(string: urlString) else {
+            return
+        }
+        do {
+            let (data, response) = try await URLSession.shared.data(from: databaseURL)
+            
+            if let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 {
+                DispatchQueue.main.async {
+                    self._parseQuotesJsonData(data: data)
+                }
+            }
+        } catch {
+            print("Error in _fetchRemoteHistoryQuotes: \(error.localizedDescription)")
+        }
+    }
+    
+    private func _parseQuotesJsonData(data: Data) {
+        let decoder = JSONDecoder()
+        do {
+            self.quotes = try decoder.decode([Quote].self, from: data)
+        } catch {
+            print("Error in _parseQuotesJsonData: \(error)")
+        }
     }
     
     func fetchQuotes() async {
-        self.quotes = load("demoArray.json")
+        await self._fetchRemoteHistoryQuotes(from: DatabaseLink.historyQuotesURL)
     }
 }
 
