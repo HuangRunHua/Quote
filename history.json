@@ -1,22 +1,10 @@
 [
     {
-        "id": 0,
-        "tag": "信鸽辉光",
-        "title": "因为从心底害怕自己不值得被爱，我们孑然一身，”那一段是这样的，“然而就是因为孑然一身，才让我们认为自己不值得被爱。有一天，你不知道是什么时候，你会驱车上路。有一天，你不知道是什么时候，他或是她会蓦然出现。你会被爱，因为你今生第一次真正不再孤独。你会选择不再孤独下去。",
-        "cardStyle": "vertical",
-        "date": "2024年6月27日",
-        "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/0.jpg",
-        "source": "《岛上书店》",
-        "coverImageWidth": 736,
-        "coverImageHeight": 736,
-        "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45"
-    },
-    {
-        "id": 1,
+        "id": 3,
         "tag": "信鸽辉光",
         "title": "因为从心底害怕自己不值得被爱，我们孑然一身",
-        "cardStyle": "vertical",
-        "date": "2024年6月26日",
+        "cardStyle": "zstack",
+        "date": "2024年6月30日",
         "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/0.jpg",
         "source": "《岛上书店》",
         "coverImageWidth": 736,
@@ -28,7 +16,7 @@
         "tag": "信鸽辉光",
         "title": "因为从心底害怕自己不值得被爱，我们孑然一身",
         "cardStyle": "vertical",
-        "date": "2024年6月25日",
+        "date": "2024年6月29日",
         "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/0.jpg",
         "source": "《岛上书店》",
         "coverImageWidth": 736,
@@ -36,11 +24,11 @@
         "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45"
     },
     {
-        "id": 3,
+        "id": 1,
         "tag": "信鸽辉光",
         "title": "因为从心底害怕自己不值得被爱，我们孑然一身",
         "cardStyle": "vertical",
-        "date": "2024年6月24日",
+        "date": "2024年6月28日",
         "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/0.jpg",
         "source": "《岛上书店》",
         "coverImageWidth": 736,
@@ -48,11 +36,11 @@
         "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45"
     },
     {
-        "id": 4,
+        "id": 0,
         "tag": "信鸽辉光",
-        "title": "因为从心底害怕自己不值得被爱，我们孑然一身",
+        "title": "因为从心底害怕自己不值得被爱，我们孑然一身，”那一段是这样的，“然而就是因为孑然一身，才让我们认为自己不值得被爱。有一天，你不知道是什么时候，你会驱车上路。有一天，你不知道是什么时候，他或是她会蓦然出现。你会被爱，因为你今生第一次真正不再孤独。你会选择不再孤独下去。",
         "cardStyle": "vertical",
-        "date": "2024年6月23日",
+        "date": "2024年6月27日",
         "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/0.jpg",
         "source": "《岛上书店》",
         "coverImageWidth": 736,

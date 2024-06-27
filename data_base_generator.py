@@ -12,11 +12,11 @@ def parase_image_width_and_height(filename: str) -> tuple[int, int]:
     
 
 if __name__ == "__main__":
-    id = 0
+    id = 3
     tag = "信鸽辉光"
     title = "因为从心底害怕自己不值得被爱，我们孑然一身"
-    cardStyle = "vertical" #vertical, zstack
-    date = "2024年6月23日"
+    cardStyle = "zstack" #vertical, zstack
+    date = "2024年6月30日"
     today_image_name = "0.jpg"
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
     source: str = "《岛上书店》"
@@ -57,7 +57,7 @@ if __name__ == "__main__":
             history_data = []
 
     # 将新数据添加到数组中
-    history_data.append(data)
+    history_data.insert(0, data)
 
     # 写入更新后的 JSON 数据
     with open(history_json_file, 'w', encoding='utf-8') as f:
