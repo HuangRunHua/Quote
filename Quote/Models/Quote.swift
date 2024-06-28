@@ -53,6 +53,19 @@ struct Quote: Identifiable, Codable {
             image: "https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/20240622_CUD001.jpg",
             coverImageWidth: 4288,
             coverImageHeight: 4800
+        ),
+        Quote(
+            id: 2,
+            tag: "苹果格调",
+            title: "总有一份你未曾预料的爱，悄悄偷走你的心",
+//            cardStyle: "zstack",
+             cardStyle: "vertical",
+            date: "2024年6月30日",
+            image: "https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/20240622_CUD001.jpg",
+            source: "《偷心书店》",
+            coverImageWidth: 1,
+            coverImageHeight: 1,
+            jumpScheme: "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=21132060722d921521140ea"
         )
     ]
 }

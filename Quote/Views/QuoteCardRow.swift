@@ -19,16 +19,19 @@ struct QuoteCardRow: View {
     }
 }
 
-#Preview("Default") {
-    QuoteCardRow(quote: Quote.preview[1])
-}
+
 
 #Preview {
-    QuoteCardRow(useLocalImage: true, quote: Quote.preview[1], showDate: true)
+    QuoteCardRow(useLocalImage: true, quote: Quote.preview[2], showDate: true)
+        .padding()
 }
 
 #Preview("Local Image Not Showing Date") {
     QuoteCardRow(useLocalImage: true, quote: Quote.preview[1], showDate: false)
+}
+
+#Preview("Default") {
+    QuoteCardRow(quote: Quote.preview[1])
 }
 
 extension QuoteCardRow {

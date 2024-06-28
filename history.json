@@ -1,5 +1,17 @@
 [
     {
+        "id": 2,
+        "tag": "苹果格调",
+        "title": "总有一份你未曾预料的爱，悄悄偷走你的心",
+        "cardStyle": "vertical",
+        "date": "2024年6月30日",
+        "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/2.jpg",
+        "source": "《偷心书店》",
+        "coverImageWidth": 736,
+        "coverImageHeight": 736,
+        "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=21132060722d921521140ea"
+    },
+    {
         "id": 1,
         "tag": "苹果格调",
         "title": "如果你瞄准月亮\n即使迷失\n也是落在璀璨星辰之间",
