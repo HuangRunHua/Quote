@@ -11,6 +11,7 @@ import NukeUI
 @MainActor
 struct QuoteCardRow: View {
     private let cornerRadius: CGFloat = 10
+    var useLocalImage: Bool = false
     var quote: Quote?
     var showDate: Bool = false
     var body: some View {
@@ -18,8 +19,16 @@ struct QuoteCardRow: View {
     }
 }
 
+#Preview("Default") {
+    QuoteCardRow(quote: Quote.preview[1])
+}
+
 #Preview {
-    QuoteCardRow(quote: Quote.preview[0], showDate: true)
+    QuoteCardRow(useLocalImage: true, quote: Quote.preview[1], showDate: true)
+}
+
+#Preview("Local Image Not Showing Date") {
+    QuoteCardRow(useLocalImage: true, quote: Quote.preview[1], showDate: false)
 }
 
 extension QuoteCardRow {
@@ -42,23 +51,29 @@ extension QuoteCardRow {
     @ViewBuilder
     private func backgroundImage(quote: Quote) -> some View {
         VStack {
-            if let imageURL = quote.imageURL {
-                LazyImage(url: imageURL, content: { phase in
-                    switch phase.result {
-                    case .success:
-                        phase.image?
-                            .resizable()
-                            .aspectRatio(quote.aspectRatio, contentMode: .fit)
-                    case .failure:
-                        Rectangle()
-                            .aspectRatio(quote.aspectRatio, contentMode: .fit)
-                            .foregroundColor(.secondary)
-                    case .none, .some:
-                        Rectangle()
-                            .aspectRatio(quote.aspectRatio, contentMode: .fit)
-                            .foregroundColor(.secondary)
-                    }
-                })
+            if self.useLocalImage {
+                Image("test")
+                    .resizable()
+                    .aspectRatio(quote.aspectRatio, contentMode: .fit)
+            } else {
+                if let imageURL = quote.imageURL {
+                    LazyImage(url: imageURL, content: { phase in
+                        switch phase.result {
+                        case .success:
+                            phase.image?
+                                .resizable()
+                                .aspectRatio(quote.aspectRatio, contentMode: .fit)
+                        case .failure:
+                            Rectangle()
+                                .aspectRatio(quote.aspectRatio, contentMode: .fit)
+                                .foregroundColor(.secondary)
+                        case .none, .some:
+                            Rectangle()
+                                .aspectRatio(quote.aspectRatio, contentMode: .fit)
+                                .foregroundColor(.secondary)
+                        }
+                    })
+                }
             }
         }
     }

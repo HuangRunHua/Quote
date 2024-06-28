@@ -46,14 +46,13 @@ struct Quote: Identifiable, Codable {
         ),
         Quote(
             id: 1, 
-            tag: "时光女王",
-            title: "因为从心底害怕自己不值得被爱，我们独来独往，”那一段是这样的，“然而就是因为独来独往，才让我们以为自己不值得被爱。有一天，你不知道是什么时候，你会驱车上路。有一天，你不知道是什么时候，你会遇到他（她）。你会被爱，因为你今生第一次真正不再孤单。你会选择不再孤单下去。",
-            cardStyle: "vertical",
-            date: "2024年6月27日",
+            tag: "苹果格调",
+            title: "如果你瞄准月亮\n即使迷失\n也是落在璀璨星辰之间",
+            cardStyle: "zstack",
+            date: "2024年6月29日",
             image: "https://www.economist.com/cdn-cgi/image/width=1424,quality=80,format=auto/content-assets/images/20240622_CUD001.jpg",
-            source: "《岛上书店》",
-            coverImageWidth: 1280,
-            coverImageHeight: 720
+            coverImageWidth: 4288,
+            coverImageHeight: 4800
         )
     ]
 }
