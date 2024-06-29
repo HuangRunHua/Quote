@@ -21,7 +21,7 @@ struct QuotesList: View {
                         QuoteCardRow(quote: quote, showDate: true)
                             .padding()
                             .onTapGesture {
-                                if let jumpScheme = quoteLoader.todayQuote?.jumpScheme, let url = URL(string: jumpScheme) {
+                                if let jumpScheme = quote.jumpScheme, let url = URL(string: jumpScheme) {
                                     openURL(url)
                                 }
                             }
