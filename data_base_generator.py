@@ -48,15 +48,15 @@ def print_json_data(data):
     print(json_data)
 
 if __name__ == "__main__":
-    id = 2 # 需要改
+    id = 3 # 需要改
     tag = "苹果格调" # 可能需要改
-    title = "总有一份你未曾预料的爱，悄悄偷走你的心" # 需要改
+    title = "关于政治、上帝和爱，人们都讲些无聊的谎话。想要了解一个人，你只需问一个问题：“你最喜欢哪本书？”" # 需要改
     cardStyle = "vertical" #vertical, zstack
     date = "2024年6月30日" # 需要改
-    today_image_name = "2.jpg" # 需要改
+    today_image_name = "3.jpg" # 需要改
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
-    source: str = "《偷心书店》" # 需要改
-    jumpScheme: str = "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=21132060722d921521140ea" # 需要改
+    source: str = "《岛上书店》" # 需要改
+    jumpScheme: str = "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45" # 需要改
     
     local_image_name = "images/" + today_image_name
     (coverImageWidth, coverImageHeight) = parase_image_width_and_height(local_image_name)

@@ -1,12 +1,12 @@
 {
-    "id": 2,
+    "id": 3,
     "tag": "苹果格调",
-    "title": "总有一份你未曾预料的爱，悄悄偷走你的心",
+    "title": "关于政治、上帝和爱，人们都讲些无聊的谎话。想要了解一个人，你只需问一个问题：“你最喜欢哪本书？”",
     "cardStyle": "vertical",
     "date": "2024年6月30日",
-    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/2.jpg",
-    "source": "《偷心书店》",
-    "coverImageWidth": 736,
-    "coverImageHeight": 736,
-    "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=21132060722d921521140ea"
+    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/3.jpg",
+    "source": "《岛上书店》",
+    "coverImageWidth": 2048,
+    "coverImageHeight": 2048,
+    "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=c7032220813ab6d0fg015d45"
 }
