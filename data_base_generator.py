@@ -48,15 +48,15 @@ def print_json_data(data):
     print(json_data)
 
 if __name__ == "__main__":
-    id = 4 # 需要改
+    id = 5 # 需要改
     tag = "苹果格调" # 可能需要改
-    title = "她的脸上泛起了可爱的红晕，她那娇羞的窘态相当明显地告诉我她的心怦怦乱跳并不是出于畏惧，而是由于爱。" # 需要改
+    title = "我努力的学习，运动，工作，就是想看看另外的自己是否优秀。" # 需要改
     cardStyle = "vertical" #vertical, zstack
-    date = "2024年7月1日" # 需要改
-    today_image_name = "4.jpg" # 需要改
+    date = "2024年7月2日" # 需要改
+    today_image_name = "5.jpg" # 需要改
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
-    source: str = "《危险的关系》" # 需要改
-    jumpScheme: str = "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=0b7321c05e38fa0b7119579" # 需要改
+    source: str = "《》" # 需要改
+    jumpScheme: str = "" # 需要改
     
     local_image_name = "images/" + today_image_name
     (coverImageWidth, coverImageHeight) = parase_image_width_and_height(local_image_name)
@@ -68,10 +68,10 @@ if __name__ == "__main__":
         "cardStyle": cardStyle,
         "date": date,
         "image": image,
-        "source": source, # 可能不存在
+        # "source": source, # 可能不存在
         "coverImageWidth": coverImageWidth,
         "coverImageHeight": coverImageHeight,
-        "jumpScheme": jumpScheme # 可能不存在
+        # "jumpScheme": jumpScheme # 可能不存在
     }
     
     print_json_data(data)

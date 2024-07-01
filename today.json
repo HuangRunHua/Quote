@@ -1,12 +1,10 @@
 {
-    "id": 4,
+    "id": 5,
     "tag": "苹果格调",
-    "title": "她的脸上泛起了可爱的红晕，她那娇羞的窘态相当明显地告诉我她的心怦怦乱跳并不是出于畏惧，而是由于爱。",
+    "title": "我努力的学习，运动，工作，就是想看看另外的自己是否优秀。",
     "cardStyle": "vertical",
-    "date": "2024年7月1日",
-    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/4.jpg",
-    "source": "《危险的关系》",
-    "coverImageWidth": 928,
-    "coverImageHeight": 928,
-    "jumpScheme": "https://weread.qq.com/book-detail?type=1&senderVid=308308448&v=0b7321c05e38fa0b7119579"
+    "date": "2024年7月2日",
+    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/5.jpg",
+    "coverImageWidth": 2048,
+    "coverImageHeight": 2048
 }
