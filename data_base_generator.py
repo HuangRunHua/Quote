@@ -48,12 +48,12 @@ def print_json_data(data):
     print(json_data)
 
 if __name__ == "__main__":
-    id = 5 # 需要改
+    id = 6 # 需要改
     tag = "苹果格调" # 可能需要改
-    title = "我努力的学习，运动，工作，就是想看看另外的自己是否优秀。" # 需要改
+    title = "你读的书越多，你就会发现，身边的人都是优秀不带优越感的人。他们明亮但不刺眼、自信又懂得收敛，让你向往的同时，又给你源源不断的正能量。" # 需要改
     cardStyle = "vertical" #vertical, zstack
-    date = "2024年7月2日" # 需要改
-    today_image_name = "5.jpg" # 需要改
+    date = "2024年7月3日" # 需要改
+    today_image_name = "6.jpg" # 需要改
     image: str = "https://gitee.com/huangrunhua/Quote/raw/main/images/" + today_image_name
     source: str = "《》" # 需要改
     jumpScheme: str = "" # 需要改
