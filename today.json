@@ -1,10 +1,10 @@
 {
-    "id": 6,
+    "id": 7,
     "tag": "苹果格调",
-    "title": "你读的书越多，你就会发现，身边的人都是优秀不带优越感的人。他们明亮但不刺眼、自信又懂得收敛，让你向往的同时，又给你源源不断的正能量。",
-    "cardStyle": "vertical",
-    "date": "2024年7月3日",
-    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/6.jpg",
-    "coverImageWidth": 2400,
-    "coverImageHeight": 1800
+    "title": "她如夏日的蝉鸣，摸不到，等不了，留不住。",
+    "cardStyle": "zstack",
+    "date": "2024年7月4日",
+    "image": "https://gitee.com/huangrunhua/Quote/raw/main/images/7.jpg",
+    "coverImageWidth": 1080,
+    "coverImageHeight": 1278
 }
